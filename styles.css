@@ -338,14 +338,13 @@ footer{
     font-display: 1.1rem;
     font-weight: bold;
     width: 50%;
-    box-shadow: -10px 10px 10px gray;
+    box-shadow:var(--box-shadow-lg)
 }
 
 /* For the paragraph with placeholder text */
 #section2 p:nth-of-type(2){
     margin: 1rem 0;
 }
-
 
 #section2 a:last-of-type{
     background-color: var(--dk-blue);
@@ -360,7 +359,7 @@ footer{
     font-display: 1.1rem;
     font-weight: bold;
     width: 50%;
-    box-shadow: -10px 10px 10px gray;
+    box-shadow: var(--box-shadow-lg)
 }
 
 
@@ -383,15 +382,12 @@ footer{
     border: 1px solid var(--teal);
 }
 
-/* To change the styles on each of those links when you're hovering over them with a mouse */
-/* 
-    TO DO: add styles to the first link on hover in this section that will:
-        - make the background the dk-blue color
-        - make the text white
-        - change the color of the border to the lt-blue color
-        - add the small box shadow, using the variable in the root
-*/
+
 #section2 a:first-of-type:hover{
+    background-color: var(--dk-blue);
+    color:white;
+    border-color: var(--lt-blue);
+    box-shadow: var(--box-shadow-sm);
 
 }
 
@@ -404,18 +400,13 @@ footer{
 
 
 /* ------------- SECTION 3 STYLES ---------------- */
-/* Sizing with width and height */
 
-/* For the corgi graphic */
-/* 
-    TO DO: add styles to the image in this section that will:
-        - turn this into a block-level element
-        - make this display at 200px wide
-        - set the height to auto
-        - add margin to center this element
-        - add the small filter drop shadow from the CSS variables in the root
-*/
 #section3 img{
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: center;
+    filter: var(--filter-shadow-sm);
     
 }
 
@@ -444,20 +435,19 @@ footer{
     box-shadow: var(--box-shadow-sm);
 }
 
-/* 
-    TO DO: add styles to the after pseudo-element on the div in this section that will:
-        - add content (empty string)
-        - make this display as a block-level element
-        - make this 50px wide
-        - make this 50px tall
-        - make the background the lt-blue color
-        - turn this square div into a circle
-        - set the position to relative
-        - give this a z-index of 2
-        - move this up from its original location by 50px
-        - move this to the right from its original location by 25px
-*/
+
 #section3 div::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--lt-blue);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    bottom:50px;
+    left:25px;
+ 
 }
 
 
@@ -469,16 +459,12 @@ footer{
     margin: 2rem 0;
 }
 
-/* For the second paragraph */
-/* 
-    TO DO: add styles to the last paragraph in this section that will:
-        - add margin:
-            - top: 1rem
-            - right: 0
-            - bottom: 1rem
-            - left: 0
-*/
+
 #section4 p:last-of-type{
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    margin-left: 0;
 
 }
 
@@ -508,14 +494,11 @@ footer{
     background: var(--dk-gray) right no-repeat url("images/puppy-photo.jpg");
 }
 
-/* For the third div, let's include the a background color, allow the image to tile, but center the tiling in the container */
-/* 
-    TO DO: add styles to the div with an ID of bg-img-3 in this section that will:
-        - add the lt-blue color to the background
-        - center the image pattern in the container
-        - add the puppy-photo as a repeating background to the container
-*/
 #bg-img-3{
+    background-color: var(--lt-blue);j
+    display:flex;
+    justify-content: center;
+    background-image: url("images/puppy-photo.jpg");
     
 }
 
@@ -535,14 +518,10 @@ footer{
 /* ------------- SECTION 7 STYLES ---------------- */
 /* Background patterns with images and CSS */
 
-/* For the first div, let's add the pattern from the images folder called wood, it is from Transparent Textures. Include the lt-gray background color as well */
-/* 
-    TO DO: add styles to the div with an ID of pattern1 in this section that will:
-        - set the background color to light-gray
-        - scale the background image to 110% 
-        - add the wood background texture from the images folder
-*/
 #pattern1{
+    background-color: var(--light-gray);
+    background-size: 110%;
+    background:url("images/wood.png")
     
 }
 
@@ -579,13 +558,6 @@ footer{
 
 /* ------------- SECTION 8 STYLES ---------------- */
 /* Floating content with CSS */
-
-/* Let's tell our images to float to the left. Remember, they'll sort of pile up next to each other in the container, but only if they're narrow enough to fit! */
-/* 
-    TO DO: add styles to the image with the ID of corgi in this section that will:
-        - float this image to the left
-        - add 1 rem of margin to the right of the image
-*/
 #corgi{
     margin-right: 1rem;
     float: left;
@@ -595,21 +567,15 @@ footer{
     margin-top: 0.5rem;
 }
 
-/* 
-    TO DO: add styles to the image with an ID of dog-house in this section that will:
-        - float the image to the right
-*/
+
 #dog-house{
+    float:right;
     
 }
 
-/* When you use floats, you have to be sure to clear them so that the rest of your page after the floats displays normally. Let's use the display section to clear the floats (because it is the next tag outside of our container in the HTML) */
-/* 
-    TO DO: add styles to the display section that will:
-        - clear any floats
-*/
 #section9{
-    
+    overflow:auto;
+
 }
 
 /* ------------- SECTION 9 STYLES ---------------- */
